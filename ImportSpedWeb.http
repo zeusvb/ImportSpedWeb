@@ -1,0 +1,6 @@
+@ImportSpedWeb_HostAddress = http://localhost:5229
+
+GET {{ImportSpedWeb_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

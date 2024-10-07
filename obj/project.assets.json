@@ -1780,11 +1780,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb.csproj",
+      "projectUniqueName": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\ImportSpedWeb.csproj",
       "projectName": "ImportSpedWeb",
-      "projectPath": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb.csproj",
+      "projectPath": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\ImportSpedWeb.csproj",
       "packagesPath": "C:\\Users\\zeusv\\.nuget\\packages\\",
-      "outputPath": "D:\\Fontes Bsb\\ImportSpedWeb\\obj\\",
+      "outputPath": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

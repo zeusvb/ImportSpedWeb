@@ -1,22 +1,29 @@
 ﻿using ImportSpedWeb.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace ImportSpedWeb.Data
 {
     public class ImportSpedContext : DbContext
     {
-        internal readonly IEnumerable<object> usuario;
+        //internal readonly IEnumerable<object> usuario;
 
-        public ImportSpedContext()
+       
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-        }  
-
-        public ImportSpedContext(DbContextOptions options) : base(options)
-        {
-
+           
+            modelBuilder.HasDefaultSchema("public");
         }
 
         public DbSet<usuario> usuarios { get; set; }
+
+        public ImportSpedContext(DbContextOptions<ImportSpedContext> options)
+       : base(options)
+        {
+        }
+
+
+       
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

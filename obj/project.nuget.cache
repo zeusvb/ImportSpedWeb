@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BFDqDv+2pCo=",
+  "dgSpecHash": "o8tSd06H628=",
   "success": true,
-  "projectFilePath": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb.csproj",
+  "projectFilePath": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\ImportSpedWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zeusv\\.nuget\\packages\\microsoft.aspnet.webapi.client\\6.0.0\\microsoft.aspnet.webapi.client.6.0.0.nupkg.sha512",
     "C:\\Users\\zeusv\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.8\\microsoft.aspnetcore.authentication.jwtbearer.8.0.8.nupkg.sha512",

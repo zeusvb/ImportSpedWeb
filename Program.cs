@@ -1,9 +1,15 @@
 
+using ImportSpedWeb.Custom;
 using ImportSpedWeb.Data;
+using ImportSpedWeb.Interfaces;
+using ImportSpedWeb.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Globalization;
+using System.Text;
 
 namespace ImportSpedWeb
 {
@@ -13,57 +19,43 @@ namespace ImportSpedWeb
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+
+            //var connectionString = builder.Configuration.GetConnectionString("ImportConnection");
+            //builder.Services.AddDbContext<ImportSpedContext>(options => options.UseNpgsql(connectionString));
 
             builder.Services.AddControllers();
-            builder.Services.AddAuthorization();
-            var config = builder.Configuration;
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
 
+            //builder.Services.AddDbContext<MiDbContext>(options =>
+            //{
+            //    options.UseSqlServer(builder.Configuration.GetConnectionString("CadenaSQL"));
+            //});
             var connectionString = builder.Configuration.GetConnectionString("ImportConnection");
             builder.Services.AddDbContext<ImportSpedContext>(options => options.UseNpgsql(connectionString));
 
-            // builder.Services.AddSwaggerGen();
-            // builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-            builder.Services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ImportSpedWeb", Version = "V2" });
-                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-                {
-                    Description = "Esquema de autorização JWT \r\n\r\n Digite 'Bearer' [Espaço] e digite o token fornecido. \r\n\r\n Exemplo: \"Bearer 12345abcdef\"",
-                    Name = "Authorization",
-                    In = ParameterLocation.Header,
-                    Type = SecuritySchemeType.ApiKey,
-                    Scheme = "Bearer"
-                });
+            builder.Services.AddSingleton<Utilidades>();
 
-                c.AddSecurityRequirement(new OpenApiSecurityRequirement()
-    {
-        {
-            new OpenApiSecurityScheme
+            builder.Services.AddAuthentication(config =>
             {
-                Reference = new OpenApiReference
+                config.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                config.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(config =>
+            {
+                config.RequireHttpsMetadata = false;
+                config.SaveToken = true;
+                config.TokenValidationParameters = new TokenValidationParameters
                 {
-                    Type = ReferenceType.SecurityScheme,
-                    Id = "Bearer",
-                },
-                Scheme = "oauth2",
-                Name = "Bearer",
-                In = ParameterLocation.Header,
-            },
-            new List<string>()
-        }
-    });
+                    ValidateIssuerSigningKey = true,
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    ValidateLifetime = true,
+                    ClockSkew = TimeSpan.Zero,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"]!))
+                };
+
             });
-
-
-
-            var cultureInfo = new CultureInfo("pt-BR");
-            cultureInfo.NumberFormat.CurrencySymbol = "R$";
-
-            CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
-            CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
 
             var app = builder.Build();
 
@@ -74,13 +66,10 @@ namespace ImportSpedWeb
                 app.UseSwaggerUI();
             }
 
-            app.UseHttpsRedirection();
-
+            app.UseCors("NewPolicy");
+            app.UseAuthentication();
             app.UseAuthorization();
-
-
             app.MapControllers();
-
             app.Run();
         }
     }

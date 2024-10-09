@@ -6,12 +6,13 @@ using ImportSpedWeb.Services;
 using System.Net;
 using System.Web.Http;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
+using Microsoft.AspNetCore.Hosting.Server;
 
 namespace ImportSpedWeb.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Microsoft.AspNetCore.Authorization.Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    //[Microsoft.AspNetCore.Authorization.Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class ImportSpedController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -26,12 +27,15 @@ namespace ImportSpedWeb.Controllers
             _logger = logger;
         }
 
-        [Microsoft.AspNetCore.Mvc.HttpPost("UploadFiles")]
+        [Microsoft.AspNetCore.Mvc.HttpPost("UploadFilesXml")]
         public async Task<IActionResult> Post(List<IFormFile> files)
         {
+          
             long size = files.Sum(f => f.Length);
             var filePath = Path.GetTempFileName();
-
+          
+            filePath = filePath.Replace(".tmp", ".txt");
+           
             foreach (var formFile in files)
             {
                 if (formFile.Length > 0)
@@ -43,7 +47,8 @@ namespace ImportSpedWeb.Controllers
                 }
             }
 
-            return Ok(new { count = files.Count, size, filePath });
+            
+            return Ok( new { count = files.Count, size, filePath });
         }
 
         [Microsoft.AspNetCore.Mvc.HttpGet(Name = "ImportDanfe")]

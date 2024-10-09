@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "ImportSpedWeb.Controllers.FilesController",
+    "Method": "GetFile",
+    "RelativePath": "api/Files/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ImportSpedWeb.Controllers.FilesController",
+    "Method": "UploadFile",
+    "RelativePath": "api/Files/uploadFilesSped",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ImportSpedWeb.Controllers.ImportSpedController",
     "Method": "Get",
     "RelativePath": "api/ImportSped",
@@ -23,7 +55,7 @@
   {
     "ContainingType": "ImportSpedWeb.Controllers.ImportSpedController",
     "Method": "Post",
-    "RelativePath": "api/ImportSped/UploadFiles",
+    "RelativePath": "api/ImportSped/UploadFilesXml",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

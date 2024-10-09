@@ -56,6 +56,7 @@ namespace ImportSpedWeb
                 };
 
             });
+            builder.Services.AddHostedService<MyBackgroundTask>();
 
             var app = builder.Build();
 

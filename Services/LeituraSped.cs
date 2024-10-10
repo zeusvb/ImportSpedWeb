@@ -20,6 +20,9 @@ namespace ImportSpedWeb.Services
 
             await escrituracao.LeArquivo(streamFile);
 
+
+
+
     }
     }
        

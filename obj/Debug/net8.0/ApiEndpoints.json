@@ -83,5 +83,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ImportSpedWeb.Controllers.LoginController",
+    "Method": "Registrar",
+    "RelativePath": "api/Login/Registrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objeto",
+        "Type": "ImportSpedWeb.DTO.UsuarioDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

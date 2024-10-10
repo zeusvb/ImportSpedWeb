@@ -40,7 +40,7 @@ namespace ImportSpedWeb.Controllers
                 contenttype = file.ContentType
             };
 
-            _context.Files.Add(fileRecord);
+            _context.files.Add(fileRecord);
             await _context.SaveChangesAsync();
 
             return Ok(new { FileId = fileRecord.idfile });
@@ -49,7 +49,7 @@ namespace ImportSpedWeb.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetFile(int id)
         {
-            var fileRecord = await _context.Files.FindAsync(id);
+            var fileRecord = await _context.files.FindAsync(id);
 
             if (fileRecord == null)
                 return NotFound();

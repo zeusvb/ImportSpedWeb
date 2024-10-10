@@ -11,12 +11,15 @@ namespace ImportSpedWeb.Data
        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-           
+
+            modelBuilder.Entity<usuario>().Property(c => c.usuario_id).IsRequired();
+            modelBuilder.Entity<FileData>().Property(c => c.idfile).IsRequired();
             modelBuilder.HasDefaultSchema("public");
+
         }
 
         public DbSet<usuario> usuarios { get; set; }
-        public DbSet<FileData> Files { get; set; }
+        public DbSet<FileData> files { get; set; }
 
         public ImportSpedContext(DbContextOptions<ImportSpedContext> options)
        : base(options)

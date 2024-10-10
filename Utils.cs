@@ -21,18 +21,18 @@ namespace ImportSpedWeb
         //    return null;
         //}
 
-        public static UsuarioDTO ToDTO(this UsuarioAPI u)
-        {
-            if (u != null)
-            {
-                return new UsuarioDTO
-                {
-                    Token = u.token,
-                    Usuario = u.usuario
-                };
-            }
+        //public static UsuarioDTO ToDTO(this UsuarioAPI u)
+        //{
+        //    if (u != null)
+        //    {
+        //        return new UsuarioDTO
+        //        {
+        //            Token = u.token,
+        //            Usuario = u.usuario
+        //        };
+        //    }
 
-            return null;
-        }
+        //    return null;
+        //}
     }
 }

@@ -12,7 +12,8 @@ namespace ImportSpedWeb.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    //[Microsoft.AspNetCore.Authorization.Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Microsoft.AspNetCore.Authorization.Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize]
     public class ImportSpedController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -34,7 +35,7 @@ namespace ImportSpedWeb.Controllers
             long size = files.Sum(f => f.Length);
             var filePath = Path.GetTempFileName();
           
-            filePath = filePath.Replace(".tmp", ".txt");
+            filePath = filePath.Replace(".tmp", ".xml");
            
             foreach (var formFile in files)
             {

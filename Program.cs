@@ -20,18 +20,12 @@ namespace ImportSpedWeb
             var builder = WebApplication.CreateBuilder(args);
 
 
-            //var connectionString = builder.Configuration.GetConnectionString("ImportConnection");
-            //builder.Services.AddDbContext<ImportSpedContext>(options => options.UseNpgsql(connectionString));
-
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            //builder.Services.AddDbContext<MiDbContext>(options =>
-            //{
-            //    options.UseSqlServer(builder.Configuration.GetConnectionString("CadenaSQL"));
-            //});
+
             var connectionString = builder.Configuration.GetConnectionString("ImportConnection");
             builder.Services.AddDbContext<ImportSpedContext>(options => options.UseNpgsql(connectionString));
 
@@ -57,6 +51,37 @@ namespace ImportSpedWeb
 
             });
             builder.Services.AddHostedService<MyBackgroundTask>();
+
+
+
+            builder.Services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "ImportSpedWebApi",
+                    Version = "v1"
+                });
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer 1safsfsdfdfd\"",
+                });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement {
+        {
+            new OpenApiSecurityScheme {
+                Reference = new OpenApiReference {
+                    Type = ReferenceType.SecurityScheme,
+                        Id = "Bearer"
+                }
+            },
+            new string[] {}
+        }
+    });
+            });
 
             var app = builder.Build();
 

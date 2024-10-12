@@ -1,5 +1,79 @@
 [
   {
+    "ContainingType": "ImportSpedWeb.Controllers.EmpresasController",
+    "Method": "GetEmpresaCnpj",
+    "RelativePath": "api/Empresas/{cnpj}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cnpj",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ImportSpedWeb.Controllers.EmpresasController",
+    "Method": "DeleteEmpresa",
+    "RelativePath": "api/Empresas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ImportSpedWeb.Models.Empresas",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ImportSpedWeb.Controllers.EmpresasController",
+    "Method": "GetEmpresaId",
+    "RelativePath": "api/Empresas/{idEmpresa}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idEmpresa",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ImportSpedWeb.Controllers.EmpresasController",
+    "Method": "RegistrarEmpresa",
+    "RelativePath": "api/Empresas/RegistrarEmpresa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Empresadto",
+        "Type": "ImportSpedWeb.DTO.EmpresaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ImportSpedWeb.Controllers.FilesController",
     "Method": "GetFile",
     "RelativePath": "api/Files/{id}",

@@ -1,10 +1,12 @@
 ﻿using ImportSpedWeb.Data;
 using ImportSpedWeb.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 
 namespace ImportSpedWeb.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class FilesController : ControllerBase

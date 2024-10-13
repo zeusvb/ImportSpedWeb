@@ -67,8 +67,7 @@ namespace ImportSpedWeb.Controllers
 
             if (PessoaRecord == null)
                 return NotFound();
-            6
-                3
+           
 
             return Ok(PessoaRecord);
         }

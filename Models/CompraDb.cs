@@ -45,7 +45,8 @@ namespace ImportSpedWeb.Models
 
         public DateTime dataatualizacao { get; set; } = DateTime.UtcNow;
 
-        public List<compraitens> itenscompra = new List<compraitens> { };
-
+        public virtual ICollection<compraitens> Compraitens { get; set; } = new List<compraitens>();
     }
+
 }
+

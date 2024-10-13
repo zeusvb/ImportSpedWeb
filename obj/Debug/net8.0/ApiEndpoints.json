@@ -1,5 +1,79 @@
 [
   {
+    "ContainingType": "ImportSpedWeb.Controllers.CompraController",
+    "Method": "GetEmpresaCnpj",
+    "RelativePath": "api/Compra/{cnpj}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cnpj",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ImportSpedWeb.Controllers.CompraController",
+    "Method": "DeletePessoa",
+    "RelativePath": "api/Compra/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ImportSpedWeb.Models.pessoa",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ImportSpedWeb.Controllers.CompraController",
+    "Method": "GetcomprasId",
+    "RelativePath": "api/Compra/{idcompra}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idcompra",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ImportSpedWeb.Controllers.CompraController",
+    "Method": "RegistrarPessoa",
+    "RelativePath": "api/Compra/RegistrarCompra",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "compraDto",
+        "Type": "ImportSpedWeb.DTO.CompraDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ImportSpedWeb.Controllers.EmpresasController",
     "Method": "GetEmpresaCnpj",
     "RelativePath": "api/Empresas/{cnpj}",
@@ -169,6 +243,80 @@
       {
         "Name": "objeto",
         "Type": "ImportSpedWeb.DTO.UsuarioDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ImportSpedWeb.Controllers.PessoaController",
+    "Method": "GetEmpresaCnpj",
+    "RelativePath": "api/Pessoa/{cnpj}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cnpj",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ImportSpedWeb.Controllers.PessoaController",
+    "Method": "DeletePessoa",
+    "RelativePath": "api/Pessoa/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ImportSpedWeb.Models.pessoa",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ImportSpedWeb.Controllers.PessoaController",
+    "Method": "GetPessoaId",
+    "RelativePath": "api/Pessoa/{idPessoa}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idPessoa",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ImportSpedWeb.Controllers.PessoaController",
+    "Method": "RegistrarPessoa",
+    "RelativePath": "api/Pessoa/RegistrarPessoa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Pessoadto",
+        "Type": "ImportSpedWeb.DTO.PessoaDTO",
         "IsRequired": true
       }
     ],

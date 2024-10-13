@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using EficazFramework.SPED.Schemas.NFe;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ImportSpedWeb.Models
 {
@@ -38,7 +39,10 @@ namespace ImportSpedWeb.Models
 
         public double valorimposto { get; set; } = 0;
 
-       
+        public virtual compra Compra { get; set; } = null!;
+
+        public virtual produto Produto { get; set; } = null!;
+
 
     }
 }

@@ -68,7 +68,7 @@ namespace ImportSpedWeb.Controllers
                 cit.valorimposto = it.valorimposto;
                 cit.iditem = it.iditem;
 
-                modelocompra.itenscompra.Add(cit);
+                modelocompra.Compraitens.Add(cit);
 
             }
          

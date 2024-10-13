@@ -26,7 +26,7 @@ namespace ImportSpedWeb.Models
 
         public string inscricaomunicipal { get; set; } = "";
 
-        public bool ativo { get; set; } = 0;
+        public bool ativo { get; set; } = true;
 
         public int documentoestrangeiro { get; set; } = 0;
 

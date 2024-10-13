@@ -41,6 +41,7 @@ namespace ImportSpedWeb.Controllers
                 email   = Empresadto.email.ToString().ToLower(),
                 telefone = Empresadto.telefone.ToString(),
                 celular = Empresadto.celular.ToString(),
+                cidadeid = Empresadto.cidadeid,
                 inscricaomunicipal = Empresadto.inscricaomunicipal.ToString(),
                 inscricaoestadual = Empresadto.inscricaoestadual.ToString(),
                
@@ -126,18 +127,9 @@ namespace ImportSpedWeb.Controllers
             catch (Exception)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError,
-                    "Error deleting data");
+                    "Error ao deletar registro");
             }
         }
-        private async  void DeleteEmpresas(int id)
-        {
-            var result = await _context.empresa.Where(c => c.empresaid == id).FirstOrDefaultAsync();
-              
-            if (result != null)
-            {
-                _context.empresa.Remove(result);
-                await _context.SaveChangesAsync();
-            }
-        }
+        
     }
 }

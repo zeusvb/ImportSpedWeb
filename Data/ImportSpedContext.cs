@@ -21,6 +21,10 @@ namespace ImportSpedWeb.Data
         public DbSet<usuario> usuarios { get; set; }
         public DbSet<FileData> files { get; set; }
         public DbSet<Empresas> empresa { get; set; }
+        public DbSet<pessoa> pessoas { get; set; }
+        public DbSet<compra> compras { get; set; }
+        public DbSet<compraitens> comprasitens { get; set; }
+
 
         public ImportSpedContext(DbContextOptions<ImportSpedContext> options)
        : base(options)

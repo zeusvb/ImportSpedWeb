@@ -45,7 +45,7 @@ namespace ImportSpedWeb.Custom
             // Crear detalle del token 
             var jwtConfig = new JwtSecurityToken(
                 claims: userClaims,
-                expires: DateTime.UtcNow.AddMinutes(30),
+                expires: DateTime.UtcNow.AddMinutes(120),
                 signingCredentials: credentials
              );
 

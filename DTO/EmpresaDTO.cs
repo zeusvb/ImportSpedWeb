@@ -27,6 +27,8 @@
 
         public string celular { get; set; }
 
+        public int cidadeid { get; set; }
+
         public string inscricaomunicipal { get; set; }
 
         public string inscricaoestadual { get; set; }

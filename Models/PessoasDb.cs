@@ -2,21 +2,33 @@
 
 namespace ImportSpedWeb.Models
 {
-
-    [Table("empresas")]
-    public class Empresas
+    [Table("pessoas")]
+    public class pessoa
     {
-        public int id { get; set; }
+
+        public int id { get; set; }       
 
         public int empresaid { get; set; }
 
+        public int tipodocumentopessoa { get; set; }
+
+        public string cnpj { get; set; } = "";
+
+        public string rg { get; set; }
+
         public string razaosocial { get; set; }
 
-        public string nomefantasia { get; set; }
+        public string nome { get; set; }
 
-        public int regimetributarioid { get; set; } = 0;
+        public int sexo { get; set; }
 
-        public string cnpj { get; set; }
+        public string inscricaoestadual { get; set; } = "";
+
+        public string inscricaomunicipal { get; set; } = "";
+
+        public bool ativo { get; set; } = 0;
+
+        public int documentoestrangeiro { get; set; } = 0;
 
         public string logradouro { get; set; }
 
@@ -27,16 +39,6 @@ namespace ImportSpedWeb.Models
         public string bairro { get; set; }
 
         public string cep { get; set; }
-
-        public string email { get; set; }
-
-        public string telefone { get; set; }
-
-        public string celular { get; set; }
-
-        public string inscricaomunicipal { get; set; } = "";
-
-        public string inscricaoestadual { get; set; } = "";
 
         public int cidadeid { get; set; }
 

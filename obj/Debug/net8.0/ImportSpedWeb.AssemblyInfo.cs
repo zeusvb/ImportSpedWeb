@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ImportSpedWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17992a2ee791b5af11ddb2d876027ae8664deb19")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b29a02c7e9fb9645feac95c94af71e4b90ccdb1")]
 [assembly: System.Reflection.AssemblyProductAttribute("ImportSpedWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ImportSpedWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

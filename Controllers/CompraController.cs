@@ -45,8 +45,6 @@ namespace ImportSpedWeb.Controllers
                 volumes = compraDto.volumes,
                 xml = compraDto.xml,
                 movimentofiscalid = compraDto.movimentofiscalid,
-
-             
             };
             foreach (var it in compraDto.itenscompra)
             {
@@ -69,7 +67,6 @@ namespace ImportSpedWeb.Controllers
                 cit.iditem = it.iditem;
 
                 modelocompra.Compraitens.Add(cit);
-
             }
          
             await _context.compras.AddAsync(modelocompra);
@@ -94,31 +91,31 @@ namespace ImportSpedWeb.Controllers
             return Ok(compraRecord);
         }
 
-        [HttpGet("{cnpj}")]
-        public async Task<IActionResult> GetEmpresaCnpj(string cnpj)
+        [HttpGet("{chave}")]
+        public async Task<IActionResult> GetEmpresaCnpj(string chave)
         {
-            var EmpresaRecord = await _context.pessoas.Where(e => e.cnpj == cnpj).FirstOrDefaultAsync();
+            var CompraRecord = await _context.compras.Where(e => e.chavenota == chave).FirstOrDefaultAsync();
 
-            if (EmpresaRecord == null)
+            if (CompraRecord == null)
                 return NotFound();
 
 
-            return Ok(EmpresaRecord);
+            return Ok(CompraRecord);
         }
 
-        [HttpDelete("{id:int}")]
-        public async Task<ActionResult<pessoa>> DeletePessoa(int id)
+        [HttpDelete("{idCompra:int}")]
+        public async Task<ActionResult<pessoa>> DeleteCompras(int idCompra)
         {
             try
             {
-                var pessoaToDelete = await _context.pessoas.Where(c => c.empresaid == id).FirstOrDefaultAsync();
+                var CompraToDelete = await _context.compras.Where(c => c.idcompra == idCompra).FirstOrDefaultAsync();
 
-                if (pessoaToDelete == null)
+                if (CompraToDelete == null)
                 {
-                    return NotFound($"Pessoa com Id = {id} não encontrada");
+                    return NotFound($"Compra com Id = {idCompra} não encontrada");
                 }
 
-                _context.pessoas.Remove(pessoaToDelete);
+                _context.compras.Remove(CompraToDelete);
                 await _context.SaveChangesAsync();
 
                 return NoContent();

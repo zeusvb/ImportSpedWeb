@@ -65,19 +65,26 @@ namespace ImportSpedWeb.Data
 
             modelBuilder.Entity<produto>(entity =>
             {
-                entity.HasKey(e => e.Id).HasName("produtos_pkey");
+                entity.HasKey(e => e.id).HasName("produtos_pkey");
                 entity.ToTable("produtos");
-                entity.Property(e => e.Id).HasColumnName("id");
-                entity.Property(e => e.Empresaid).HasColumnName("empresaid");
-                entity.Property(e => e.Marcaid).HasColumnName("marcaid");
-                entity.Property(e => e.Marcaprodutoid).HasColumnName("marcaprodutoid");
-                entity.Property(e => e.Ncmid).HasColumnName("ncmid");
-                entity.Property(e => e.Origemid).HasColumnName("origemid");
-                entity.Property(e => e.Tipoprodutoid).HasColumnName("tipoprodutoid");
-                entity.Property(e => e.Unidademedidaid).HasColumnName("unidademedidaid");
-                entity.Property(e => e.Usuarioid).HasColumnName("usuarioid");
+                entity.Property(e => e.id).HasColumnName("id");
+                entity.Property(e => e.empresaid).HasColumnName("empresaid");
+                entity.Property(e => e.marcaid).HasColumnName("marcaid");
+                entity.Property(e => e.marcaprodutoid).HasColumnName("marcaprodutoid");
+                entity.Property(e => e.ncmid).HasColumnName("ncmid");
+                entity.Property(e => e.origemid).HasColumnName("origemid");
+                entity.Property(e => e.tipoprodutoid).HasColumnName("tipoprodutoid");
+                entity.Property(e => e.unidademedidaid).HasColumnName("unidademedidaid");
+                entity.Property(e => e.usuarioid).HasColumnName("usuarioid");
             });
 
+            modelBuilder.Entity<municipio>(entity =>
+            {
+                entity.HasKey(e => e.id).HasName("municipio_pkey");
+                entity.ToTable("municipio");
+                entity.Property(e => e.id).HasColumnName("id");
+                
+            });
 
             modelBuilder.HasDefaultSchema("public");
 
@@ -91,6 +98,9 @@ namespace ImportSpedWeb.Data
         public DbSet<pessoa> pessoas { get; set; }
         public DbSet<compra> compras { get; set; }
         public DbSet<compraitens> comprasitens { get; set; }
+        public DbSet<produto> Produto { get; set; }
+        public DbSet<municipio> Municipio { get; set; }
+        
 
 
         public ImportSpedContext(DbContextOptions<ImportSpedContext> options)

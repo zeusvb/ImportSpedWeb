@@ -1,12 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using ImportSpedWeb.Models;
 
-namespace ImportSpedWeb.Models
+namespace ImportSpedWeb.DTO
 {
-    [Table("produto")]
-    public partial class produto
+    public partial class ProdutoDTO
     {
-        public int id { get; set; }
-
+     
         public int empresaid { get; set; }
 
         public int usuarioid { get; set; }
@@ -36,7 +34,5 @@ namespace ImportSpedWeb.Models
         public int? marcaprodutoid { get; set; }
 
         public int? anpprodutoid { get; set; }
-
-        public virtual ICollection<compraitens> Compraitens { get; set; } = new List<compraitens>();
     }
 }

@@ -88,7 +88,7 @@ namespace ImportSpedWeb.Data
 
             modelBuilder.HasDefaultSchema("public");
 
-            OnModelCreating(modelBuilder);
+           // OnModelCreating(modelBuilder);
 
         }
 

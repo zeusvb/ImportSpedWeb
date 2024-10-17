@@ -40,12 +40,11 @@ namespace ImportSpedWeb.Controllers
                                     .Where(u =>
                                     u.nome == objeto.Usuario.ToString().ToUpper() &&
                                     u.senha == objeto.Pass
-                                    //_utilidades.EncriptarSHA256(objeto.Password)
                                     ).FirstOrDefaultAsync();
             if (UsuarioEncontrado == null)
-                return StatusCode(StatusCodes.Status200OK, new { isSucces = false, token = "" });
+                return StatusCode(StatusCodes.Status404NotFound, new { isSucces = false, token = "" });
             else
-                return StatusCode(StatusCodes.Status200OK, new { isSucces = true, token = _utilidades.GenerarJWT(UsuarioEncontrado) });
+                return StatusCode(StatusCodes.Status200OK, new { isSucces = true, IdUser= UsuarioEncontrado.usuario_id, token = _utilidades.GenerarJWT(UsuarioEncontrado) });
         }
         [HttpPost]
         [Route("Registrar")]
@@ -65,7 +64,7 @@ namespace ImportSpedWeb.Controllers
             if (modeloUsuario.nome == null)
                 return StatusCode(StatusCodes.Status401Unauthorized, new { idSucces = false });
             else
-                return StatusCode(StatusCodes.Status201Created, new { idSucces = true });
+                return StatusCode(StatusCodes.Status201Created, new { idSucces = true, IdUser = modeloUsuario.usuario_id });
 
         }
       

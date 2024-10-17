@@ -1,10 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ImportSpedWeb.Models
 {
     [Table("compra")]
     public class compra
     {
+        [Key]
         public int idcompra { get; set; }
 
         public int empresaid { get; set; }

@@ -1,4 +1,5 @@
 ﻿using EficazFramework.SPED.Schemas.NFe;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ImportSpedWeb.Models
@@ -7,10 +8,10 @@ namespace ImportSpedWeb.Models
     [Table("compraitens")]
     public class compraitens
     {
-        public int compraid { get; set; }
+        [Key]
+        public int idcompra { get; set; }
 
-        public int idcompraitens { get; set; }
-
+        [Key]
         public int iditem { get; set; }
 
         public int produtoid { get; set; }

@@ -54,6 +54,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "EfCore.SchemaCompare": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
             "EficazFramework.SPED": {
               "target": "Package",
               "version": "[6.2.2, )"

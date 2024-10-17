@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ImportSpedWeb.Models
 {
@@ -6,6 +7,7 @@ namespace ImportSpedWeb.Models
     public class pessoa
     {
 
+        [Key]
         public int id { get; set; }       
 
         public int empresaid { get; set; }

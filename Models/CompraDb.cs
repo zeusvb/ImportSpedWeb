@@ -4,50 +4,49 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ImportSpedWeb.Models
 {
     [Table("compra")]
-    public class compra
+    public partial class Compra
     {
-        [Key]
-        public int idcompra { get; set; }
+        public int Idcompra { get; set; }
 
-        public int empresaid { get; set; }
+        public int Empresaid { get; set; }
 
-        public int usuarioid { get; set; }
+        public int Usuarioid { get; set; }
 
-        public int status { get; set; }
+        public DateTime Dataentrada { get; set; }
 
-        public int origem { get; set; }
+        public DateTime Dataemissao { get; set; }
 
-        public int tipooperacaoid { get; set; }
+        public DateTime Datacriacao { get; set; }
 
-        public double totalnota { get; set; } = 0;
+        public DateTime Dataatualizacao { get; set; }
 
-        public int volumes { get; set; } = 0;
+        public int Status { get; set; }
 
-        public double totaldesconto { get; set; } = 0;
+        public int Origem { get; set; }
 
-        public double totalacrescimo { get; set; } = 0;
+        public int Tipooperacaoid { get; set; }
 
-        public double totalfinal { get; set; } = 0;
+        public decimal Totalnota { get; set; }
 
-        public int movimentofiscalid { get; set; }
+        public int? Volumes { get; set; }
 
-        public int numeronota { get; set; }
+        public decimal Totaldesconto { get; set; }
 
-        public string chavenota { get; set; }
+        public decimal Totalacrescimo { get; set; }
 
-        public int pessoaid { get; set; }
+        public decimal Totalfinal { get; set; }
 
-        public string xml { get; set; }
+        public int Movimentofiscalid { get; set; }
 
-        public DateTime dataentrada { get; set; }
+        public int? Numeronota { get; set; }
 
-        public DateTime dataemissao { get; set; }
+        public string Chavenota { get; set; }
 
-        public DateTime datacriacao { get; set; } = DateTime.UtcNow;
+        public int? Pessoaid { get; set; }
 
-        public DateTime dataatualizacao { get; set; } = DateTime.UtcNow;
+        public string Xml { get; set; }
 
-        public virtual ICollection<compraitens> Compraitens { get; set; } = new List<compraitens>();
+        public virtual ICollection<Compraiten> Compraitens { get; set; } = new List<Compraiten>();
     }
 
 }

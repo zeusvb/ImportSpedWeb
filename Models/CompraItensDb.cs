@@ -6,43 +6,43 @@ namespace ImportSpedWeb.Models
 {
 
     [Table("compraitens")]
-    public class compraitens
+    public partial class Compraiten
     {
-        [Key]
-        public int idcompra { get; set; }
+        public int Idcompra { get; set; }
 
-        [Key]
-        public int iditem { get; set; }
+        public int Iditem { get; set; }
 
-        public int produtoid { get; set; }
+        public int Produtoid { get; set; }
 
-        public string descricaoproduto { get; set; }
+        public string Descricaoproduto { get; set; }
 
-        public double quantidade { get; set; } = 0;
+        public decimal Quantidade { get; set; }
 
-        public double precounitario { get; set; } = 0;
+        public decimal Precounitario { get; set; }
 
-        public double subtotal { get; set; } = 0;
+        public decimal Subtotal { get; set; }
 
-        public double desconto { get; set; } = 0;
+        public decimal? Desconto { get; set; }
 
-        public double acrescimo { get; set; } = 0;
+        public decimal? Acrescimo { get; set; }
 
-        public double frete { get; set; } = 0;
+        public decimal? Frete { get; set; }
 
-        public double outrasdespesas { get; set; } = 0;
+        public decimal? Outrasdespesas { get; set; }
 
-        public double seguro { get; set; } = 0;
+        public decimal? Seguro { get; set; }
 
-        public double totalfinal { get; set; } = 0;
+        public decimal Totalfinal { get; set; }
 
-        public int unidademedidaid { get; set; }
+        public int Compraid { get; set; }
 
-        public double valorimposto { get; set; } = 0;
+        public int Unidademedidaid { get; set; }
 
-        public virtual compra Compra { get; set; } = null!;
+        public decimal Valorimposto { get; set; }
 
-        public virtual produto Produto { get; set; } = null!;
+        public virtual ImportSpedWeb.Models.Compra Compra { get; set; }
+
+        public virtual ImportSpedWeb.Models.produto Produto { get; set; }
 
 
     }

@@ -26,45 +26,45 @@ namespace ImportSpedWeb.Controllers
         public async Task<IActionResult> RegistrarPessoa(CompraDTO compraDto)
         {
 
-            var modelocompra = new compra
+            var modelocompra = new Compra
             {
-                chavenota = compraDto.chavenota,
-                empresaid = compraDto.empresaid,
-                numeronota = compraDto.numeronota,
-                pessoaid = compraDto.pessoaid,
-                origem = compraDto.origem,
-                status = compraDto.status,
-                tipooperacaoid = compraDto.tipooperacaoid,
-                dataentrada = compraDto.dataentrada,
-                dataemissao = compraDto.dataemissao,
-                totalacrescimo = compraDto.totalacrescimo,
-                totaldesconto = compraDto.totaldesconto,
-                totalfinal = compraDto.totalfinal,
-                totalnota = compraDto.totalnota,
-                usuarioid = compraDto.usuarioid,
-                volumes = compraDto.volumes,
-                xml = compraDto.xml,
-                movimentofiscalid = compraDto.movimentofiscalid,
+                Chavenota = compraDto.chavenota,
+                Empresaid = compraDto.empresaid,
+                Numeronota = compraDto.numeronota,
+                Pessoaid = compraDto.pessoaid,
+                Origem = compraDto.origem,
+                Status = compraDto.status,
+                Tipooperacaoid = compraDto.tipooperacaoid,
+                Dataentrada = compraDto.dataentrada,
+                Dataemissao = compraDto.dataemissao,
+                Totalacrescimo = (decimal) compraDto.totalacrescimo,
+                Totaldesconto =(decimal) compraDto.totaldesconto,
+                Totalfinal = (decimal)compraDto.totalfinal,
+                Totalnota =(decimal) compraDto.totalnota,
+                Usuarioid = compraDto.usuarioid,
+                Volumes = compraDto.volumes,
+                Xml = compraDto.xml,
+                Movimentofiscalid = compraDto.movimentofiscalid,
             };
             foreach (var it in compraDto.itenscompra)
             {
-                compraitens cit = new compraitens();
+                Compraiten cit = new Compraiten();
 
-                cit.acrescimo = it.acrescimo;
-                cit.produtoid = it.produtoid;
-                cit.seguro = it.seguro;
-                cit.frete = it.frete;
-                cit.descricaoproduto = it.descricaoproduto;
-                cit.outrasdespesas = it.outrasdespesas;
-                cit.produtoid=it.produtoid;
-                cit.quantidade = it.quantidade;
-                cit.desconto = it.desconto;
-                cit.precounitario = it.precounitario;
-                cit.subtotal = it.subtotal;
-                cit.totalfinal  = it.totalfinal;
-                cit.unidademedidaid = it.unidademedidaid;
-                cit.valorimposto = it.valorimposto;
-                cit.iditem = it.iditem;
+                cit.Acrescimo = (decimal)it.acrescimo;
+                cit.Produtoid = it.produtoid;
+                cit.Seguro =(decimal)  it.seguro;
+                cit.Frete = (decimal)it.frete;
+                cit.Descricaoproduto = it.descricaoproduto;
+                cit.Outrasdespesas =(decimal)  it.outrasdespesas;
+                cit.Produtoid=it.produtoid;
+                cit.Quantidade = (decimal)it.quantidade;
+                cit.Desconto = (decimal)it.desconto;
+                cit.Precounitario = (decimal)it.precounitario;
+                cit.Subtotal = (decimal)it.subtotal;
+                cit.Totalfinal  = (decimal)it.totalfinal;
+                cit.Unidademedidaid = it.unidademedidaid;
+                cit.Valorimposto = (decimal)it.valorimposto;
+                cit.Iditem = it.iditem;
 
                 modelocompra.Compraitens.Add(cit);
             }
@@ -72,7 +72,7 @@ namespace ImportSpedWeb.Controllers
             await _context.compras.AddAsync(modelocompra);
             await _context.SaveChangesAsync();
 
-            if (modelocompra.chavenota == null)
+            if (modelocompra.Chavenota == null)
                 return StatusCode(StatusCodes.Status401Unauthorized, new { idSucces = false });
             else
                 return StatusCode(StatusCodes.Status201Created, new { idSucces = true });
@@ -82,7 +82,7 @@ namespace ImportSpedWeb.Controllers
         [HttpGet("{idcompra::int}")]
         public async Task<IActionResult> GetcomprasId(int idcompra)
         {
-            var compraRecord = await _context.compras.Where(e => e.idcompra == idcompra).FirstOrDefaultAsync();
+            var compraRecord = await _context.compras.Where(e => e.Idcompra == idcompra).FirstOrDefaultAsync();
 
             if (compraRecord == null)
                 return NotFound();
@@ -94,7 +94,7 @@ namespace ImportSpedWeb.Controllers
         [HttpGet("{chave}")]
         public async Task<IActionResult> GetEmpresaCnpj(string chave)
         {
-            var CompraRecord = await _context.compras.Where(e => e.chavenota == chave).FirstOrDefaultAsync();
+            var CompraRecord = await _context.compras.Where(e => e.Chavenota == chave).FirstOrDefaultAsync();
 
             if (CompraRecord == null)
                 return NotFound();
@@ -108,7 +108,7 @@ namespace ImportSpedWeb.Controllers
         {
             try
             {
-                var CompraToDelete = await _context.compras.Where(c => c.idcompra == idCompra).FirstOrDefaultAsync();
+                var CompraToDelete = await _context.compras.Where(c => c.Idcompra == idCompra).FirstOrDefaultAsync();
 
                 if (CompraToDelete == null)
                 {

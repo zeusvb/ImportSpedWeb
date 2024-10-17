@@ -39,6 +39,6 @@ namespace ImportSpedWeb.Models
 
         public int? anpprodutoid { get; set; }
 
-        public virtual ICollection<compraitens> Compraitens { get; set; } = new List<compraitens>();
+        public virtual ICollection<Compraiten> Compraitens { get; set; } = new List<Compraiten>();
     }
 }

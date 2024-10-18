@@ -22,44 +22,24 @@ namespace ImportSpedWeb.Controllers
             _env = env;
         }
 
-        //[HttpPost("RegistrarEmpresa")]
-        //public async Task<IActionResult> RegistrarEmpresa(EmpresaDTO Empresadto)
-        //{
-        //    var modeloempresa = new Empresas
-        //    {
-        //        razaosocial = Empresadto.razaosocial.ToString().ToUpper(),
-        //        nomefantasia = Empresadto.nomefantasia.ToString().ToUpper(),
-        //        regimetributarioid = Empresadto.regimetributarioid,
-        //        cnpj = Empresadto.cnpj.ToString(),
-        //        logradouro = Empresadto.logradouro.ToString().ToUpper(),
-        //        complemento = Empresadto.complemento.ToString().ToUpper(),
-        //        numero = Empresadto.numero.ToString(),
-        //        bairro = Empresadto.bairro.ToString().ToUpper(),
-        //        cep = Empresadto.cep.ToString(),
-        //        email = Empresadto.email.ToString().ToLower(),
-        //        telefone = Empresadto.telefone.ToString(),
-        //        celular = Empresadto.celular.ToString(),
-        //        cidadeid = Empresadto.cidadeid,
-        //        inscricaomunicipal = Empresadto.inscricaomunicipal.ToString(),
-        //        inscricaoestadual = Empresadto.inscricaoestadual.ToString(),
-
-        //    };
-
-        //    await _context.empresa.AddAsync(modeloempresa);
-        //    await _context.SaveChangesAsync();
-
-        //    if (modeloempresa.razaosocial == null)
-        //        return StatusCode(StatusCodes.Status401Unauthorized, new { idSucces = false });
-        //    else
-        //        return StatusCode(StatusCodes.Status201Created, new { idSucces = true });
-
-        //}
 
         [HttpGet("{IbgeMunicipio}")]
         public async Task<IActionResult> GetMunicipioIbge(string IbgeMunicipio)
         {
             var EmpresaRecord = await _context.Municipio.Where(e => e.codigoibge == IbgeMunicipio).FirstOrDefaultAsync();
 
+            if (EmpresaRecord == null)
+                return NotFound();
+
+
+            return Ok(EmpresaRecord);
+        }
+
+        [HttpGet("{NomeMunicipio::required}")]
+        public async Task<IActionResult> GetMunicipio(string NomeMunicipio)
+        {
+
+            var EmpresaRecord = await _context.Municipio.Where(e => EF.Functions.Like(e.descricao.ToString().ToLower(), "%" + NomeMunicipio.ToUpper() + "%")).ToListAsync();
             if (EmpresaRecord == null)
                 return NotFound();
 

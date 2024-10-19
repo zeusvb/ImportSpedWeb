@@ -28,7 +28,7 @@ namespace ImportSpedWeb.Models
 
         public decimal Totalnota { get; set; }
 
-        public int? Volumes { get; set; }
+        public int Volumes { get; set; }
 
         public decimal Totaldesconto { get; set; }
 
@@ -38,13 +38,13 @@ namespace ImportSpedWeb.Models
 
         public int Movimentofiscalid { get; set; }
 
-        public int? Numeronota { get; set; }
+        public int Numeronota { get; set; }
 
-        public string Chavenota { get; set; }
+        public string Chavenota { get; set; }= "";
 
-        public int? Pessoaid { get; set; }
+        public int Pessoaid { get; set; }
 
-        public string Xml { get; set; }
+        public string Xml { get; set; } = "";
 
         public virtual ICollection<Compraiten> Compraitens { get; set; } = new List<Compraiten>();
     }

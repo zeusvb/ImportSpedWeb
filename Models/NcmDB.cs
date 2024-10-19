@@ -3,13 +3,13 @@
   
         public  class Ncm
         {
-            public int Id { get; set; }
+                public int Id { get; set; }
 
-            public string Codigo { get; set; }
+            public string Codigo { get; set; } = "";
 
-            public string Descricao { get; set; }
+            public string Descricao { get; set; } = "";
 
-            public string Estado { get; set; }
+            public string Estado { get; set; } = "";
 
             public int? Ex { get; set; }
 

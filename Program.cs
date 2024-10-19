@@ -50,7 +50,8 @@ namespace ImportSpedWeb
                 };
 
             });
-            builder.Services.AddHostedService<MyBackgroundTask>();
+            
+            //builder.Services.AddHostedService<MyBackgroundTask>();
 
 
 

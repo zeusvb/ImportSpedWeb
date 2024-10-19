@@ -13,9 +13,9 @@ namespace ImportSpedWeb.DTO
 
         public string descricao { get; set; } = null!;
 
-        public string? ean { get; set; }
+        public string ean { get; set; } = "";
 
-        public string? cest { get; set; }
+        public string cest { get; set; } = "";
 
         public int unidademedidaid { get; set; }
 

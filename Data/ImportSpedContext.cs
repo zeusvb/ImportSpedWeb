@@ -30,9 +30,9 @@ namespace ImportSpedWeb.Data
         {
             modelBuilder.Entity<FileData>(entity =>
             {
-                entity.HasKey(e => e.idfile).HasName("arquivossped_pk");
+                entity.HasKey(e => e.idfiles).HasName("arquivossped_pk");
                 entity.ToTable("arquivossped");
-                entity.Property(e => e.idfile).HasColumnName("idfiles");
+                entity.Property(e => e.idfiles).HasColumnName("idfiles");
             });
 
             modelBuilder.Entity<ImportSpedWeb.Models.Compra>(entity =>
@@ -202,6 +202,11 @@ namespace ImportSpedWeb.Data
         public ImportSpedContext(DbContextOptions<ImportSpedContext> options)
        : base(options)
         {
+           // AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+        }
+        static ImportSpedContext()
+        {
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

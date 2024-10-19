@@ -9,9 +9,9 @@ namespace ImportSpedWeb.Models
         [Key]
         public int id { get; set; }
 
-        public string? codigoibge { get; set; }
+        public string codigoibge { get; set; } = "";
 
-        public string? descricao { get; set; }
+        public string descricao { get; set; } = "";
 
         public int codigoestado { get; set; }
     }

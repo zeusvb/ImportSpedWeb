@@ -8,11 +8,12 @@ namespace ImportSpedWeb.Models
     public class FileData
     {
         [Key]
-        public int idfile { get; set; }
-        public string fileName { get; set; }
-        public string contenttype { get; set; } // Tipo MIME
-        public string filepath { get; set; }
+        public int idfiles { get; set; }
+        public string filename { get; set; } = "";
+        public string contenttype { get; set; } = "";// Tipo MIME
+        public string filepath { get; set; } = "";
         public byte[] data { get; set; } // Conteúdo binário do arquivo
-        public DateTime uploadedat { get; set; } = DateTime.UtcNow;
+        public int status { get; set; } = 0;
+      //  public DateTime uploadedat { get; set; } = DateTime.UtcNow;
     }
 }

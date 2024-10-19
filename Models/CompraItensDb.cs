@@ -14,7 +14,7 @@ namespace ImportSpedWeb.Models
 
         public int Produtoid { get; set; }
 
-        public string Descricaoproduto { get; set; }
+        public string Descricaoproduto { get; set; } = "";
 
         public decimal Quantidade { get; set; }
 
@@ -22,17 +22,17 @@ namespace ImportSpedWeb.Models
 
         public decimal Subtotal { get; set; }
 
-        public decimal? Desconto { get; set; }
+        public decimal Desconto { get; set; } = 0;
 
-        public decimal? Acrescimo { get; set; }
+        public decimal Acrescimo { get; set; } = 0;
 
-        public decimal? Frete { get; set; }
+        public decimal Frete { get; set; } = 0;
 
-        public decimal? Outrasdespesas { get; set; }
+        public decimal Outrasdespesas { get; set; } = 0;
 
-        public decimal? Seguro { get; set; }
+        public decimal Seguro { get; set; } = 0;
 
-        public decimal Totalfinal { get; set; }
+        public decimal Totalfinal { get; set; } = 0;
 
         public int Compraid { get; set; }
 

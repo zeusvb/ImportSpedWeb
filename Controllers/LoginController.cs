@@ -34,13 +34,13 @@ namespace ImportSpedWeb.Controllers
 
         [HttpPost]
         [Route("Login")]
-        public async Task<IActionResult> Login(Login objeto)
+        public IActionResult Login(Login objeto)
         {
-            var UsuarioEncontrado = await _context.usuarios
+            var UsuarioEncontrado =  _context.usuarios
                                     .Where(u =>
                                     u.nome == objeto.Usuario.ToString().ToUpper() &&
                                     u.senha == objeto.Pass
-                                    ).FirstOrDefaultAsync();
+                                    ).FirstOrDefault();
             if (UsuarioEncontrado == null)
                 return StatusCode(StatusCodes.Status404NotFound, new { isSucces = false, token = "" });
             else

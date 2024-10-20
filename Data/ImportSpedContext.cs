@@ -194,6 +194,196 @@ namespace ImportSpedWeb.Data
                     .HasColumnName("vigenciainicio");
             });
 
+            modelBuilder.Entity<Vendaitem>(entity =>
+            {
+                entity.HasKey(e => new { e.idvenda, e.numerosequencialitem }).HasName("vendaitem_pkey");
+
+                entity.ToTable("vendaitem");
+
+                entity.HasIndex(e => e.idvenda, "fki_vendaitem_venda_fk");
+
+                entity.Property(e => e.idvenda)
+                    .ValueGeneratedOnAdd()
+                    .HasColumnName("idvenda");
+                entity.Property(e => e.numerosequencialitem)
+                    .ValueGeneratedOnAdd()
+                    .HasColumnName("numerosequencialitem");
+                entity.Property(e => e.abatimentosnt)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("abatimentosnt");
+                entity.Property(e => e.aliquota_icms)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("aliquota_icms");
+                entity.Property(e => e.aliquota_ipi)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("aliquota_ipi");
+                entity.Property(e => e.aliquotapercentual_cofins)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("aliquotapercentual_cofins");
+                entity.Property(e => e.aliquotapercentual_pis)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("aliquotapercentual_pis");
+                entity.Property(e => e.aliquotareais_cofins)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("aliquotareais_cofins");
+                entity.Property(e => e.aliquotareais_pis)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("aliquotareais_pis");
+                entity.Property(e => e.aliquotast_icms)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("aliquotast_icms");
+                entity.Property(e => e.basecalculo_cofins)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("basecalculo_cofins");
+                entity.Property(e => e.basecalculo_icms)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("basecalculo_icms");
+                entity.Property(e => e.basecalculo_ipi)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("basecalculo_ipi");
+                entity.Property(e => e.basecalculo_pis)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("basecalculo_pis");
+                entity.Property(e => e.basecalculoquantidade_cofins)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("basecalculoquantidade_cofins");
+                entity.Property(e => e.basecalculoquantidade_pis)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("basecalculoquantidade_pis");
+                entity.Property(e => e.basecalculost_icms)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("basecalculost_icms");
+                entity.Property(e => e.cfop)
+                    .HasMaxLength(50)
+                    .HasColumnName("cfop");
+                entity.Property(e => e.codigocontacontabil)
+                    .HasMaxLength(255)
+                    .HasColumnName("codigocontacontabil");
+                entity.Property(e => e.codigoproduto)
+                    .HasMaxLength(255)
+                    .HasColumnName("codigoproduto");
+                entity.Property(e => e.cst_cofins).HasColumnName("cst_cofins");
+                entity.Property(e => e.cst_icms).HasColumnName("cst_icms");
+                entity.Property(e => e.cst_ipi)
+                    .HasMaxLength(50)
+                    .HasColumnName("cst_ipi");
+                entity.Property(e => e.cst_pis).HasColumnName("cst_pis");
+                entity.Property(e => e.desconto)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("desconto");
+                entity.Property(e => e.descricaocomplementaritem)
+                    .HasMaxLength(255)
+                    .HasColumnName("descricaocomplementaritem");
+                entity.Property(e => e.enquadramento_ipi)
+                    .HasMaxLength(255)
+                    .HasColumnName("enquadramento_ipi");
+                entity.Property(e => e.indicadormovimento).HasColumnName("indicadormovimento");
+                entity.Property(e => e.naturezaoperacao)
+                    .HasMaxLength(255)
+                    .HasColumnName("naturezaoperacao");
+                entity.Property(e => e.origem).HasColumnName("origem");
+                entity.Property(e => e.quantidade)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("quantidade");
+                entity.Property(e => e.totalitem)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("totalitem");
+                entity.Property(e => e.unidademedida)
+                    .HasMaxLength(50)
+                    .HasColumnName("unidademedida");
+                entity.Property(e => e.valor_cofins)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("valor_cofins");
+                entity.Property(e => e.valorst_icms)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("valor_icms");
+                entity.Property(e => e.valor_ipi)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("valor_ipi");
+                entity.Property(e => e.valor_pis)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("valor_pis");
+                entity.Property(e => e.valorst_icms)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("valorst_icms");
+
+                entity.HasOne(d => d.IdvendaNavigation).WithMany(p => p.Vendaitems)
+                    .HasForeignKey(d => d.idvenda)
+                    .HasConstraintName("vendaitem_venda_fk");
+            });
+
+            modelBuilder.Entity<Venda>(entity =>
+            {
+                entity.HasKey(e => e.idvenda).HasName("venda_pk");
+
+                entity.ToTable("venda");
+
+                entity.Property(e => e.idvenda).HasColumnName("idvenda");
+                entity.Property(e => e.chavenfe)
+                    .HasMaxLength(44)
+                    .HasColumnName("chavenfe");
+                entity.Property(e => e.codigoparticipante)
+                    .HasMaxLength(255)
+                    .HasColumnName("codigoparticipante");
+                entity.Property(e => e.dataemissao).HasColumnName("dataemissao");
+                entity.Property(e => e.dataentradasaida).HasColumnName("dataentradasaida");
+                entity.Property(e => e.especiedocumento)
+                    .HasMaxLength(255)
+                    .HasColumnName("especiedocumento");
+                entity.Property(e => e.numero).HasColumnName("numero");
+                entity.Property(e => e.serie)
+                    .HasMaxLength(3)
+                    .HasColumnName("serie");
+                entity.Property(e => e.valorabatimento)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("valorabatimento");
+                entity.Property(e => e.valorbasecalculoicms)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("valorbasecalculoicms");
+                entity.Property(e => e.valorbasecalculoicmsst)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("valorbasecalculoicmsst");
+                entity.Property(e => e.valorcofins)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("valorcofins");
+                entity.Property(e => e.valorcofinsst)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("valorcofinsst");
+                entity.Property(e => e.valordesconto)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("valordesconto");
+                entity.Property(e => e.valorfrete)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("valorfrete");
+                entity.Property(e => e.valoricms)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("valoricms");
+                entity.Property(e => e.valoricmsst)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("valoricmsst");
+                entity.Property(e => e.valoripi)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("valoripi");
+                entity.Property(e => e.valoroutrasdespesas)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("valoroutrasdespesas");
+                entity.Property(e => e.valorpis)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("valorpis");
+                entity.Property(e => e.valorpisst)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("valorpisst");
+                entity.Property(e => e.valorseguro)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("valorseguro");
+                entity.Property(e => e.valortotaldocumento)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("valortotaldocumento");
+                entity.Property(e => e.valortotalmercadorias)
+                    .HasDefaultValueSql("0")
+                    .HasColumnName("valortotalmercadorias");
+            });
+
             modelBuilder.HasDefaultSchema("public");
 
             // OnModelCreating(modelBuilder);

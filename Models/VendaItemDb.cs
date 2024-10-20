@@ -1,46 +1,50 @@
 ﻿
+using System;
+
 namespace ImportSpedWeb.Models
 {
     public class Vendaitem
     {
         public int idvenda { get; set; }
-        public int NumeroSequencialItem { get; set; }
-        public string CodigoProduto { get; set; }
-        public string DescricaoComplementarItem { get; set; }
-        public double Quantidade { get; set; }
-        public string UnidadeMedida { get; set; }
-        public double TotalItem { get; set; }
-        public double Desconto { get; set; }
-        public bool IndicadorMovimento { get; set; }
-        public int Origem { get; set; }
-        public int CST_ICMS { get; set; }
-        public string CFOP { get; set; }
-        public string NaturezaOperacao { get; set; }
-        public double BaseCalculo_ICMS { get; set; }
-        public double Aliquota_ICMS { get; set; }
-        public double Valor_ICMS { get; set; }
-        public double BaseCalculoST_ICMS { get; set; }
-        public double AliquotaST_ICMS { get; set; }
-        public double ValorST_ICMS { get; set; }
-        public string CST_IPI { get; set; }
-        public string Enquadramento_IPI { get; set; }
-        public double BaseCalculo_IPI { get; set; }
-        public double Aliquota_IPI { get; set; }
-        public double Valor_IPI { get; set; }
-        public int CST_PIS { get; set; } = 0;
-        public double BaseCalculo_PIS { get; set; }
-        public double BaseCalculoQuantidade_PIS { get; set; }
-        public double AliquotaPercentual_PIS { get; set; }
-        public double AliquotaReais_PIS { get; set; }
-        public double Valor_PIS { get; set; }
-        public int CST_COFINS { get; set; }
-        public double BaseCalculo_COFINS { get; set; }
-        public double BaseCalculoQuantidade_COFINS { get; set; }
-        public double AliquotaPercentual_COFINS { get; set; }
-        public double AliquotaReais_COFINS { get; set; }
-        public double Valor_COFINS { get; set; }
-        public string CodigoContaContabil { get; set; }
-        public double AbatimentosNT { get; set; }
+        public int numerosequencialitem { get; set; }
+        public string codigoproduto { get; set; }
+        public string descricaocomplementaritem { get; set; }
+        public double quantidade { get; set; }
+        public string unidademedida { get; set; }
+        public double totalitem { get; set; }
+        public double desconto { get; set; }
+        public bool indicadormovimento { get; set; }
+        public int origem { get; set; }
+        public int cst_icms { get; set; }
+        public string cfop { get; set; }
+        public string naturezaoperacao { get; set; }
+        public double basecalculo_icms { get; set; }
+        public double aliquota_icms { get; set; }
+        public double valor_icms { get; set; }
+        public double basecalculost_icms { get; set; }
+        public double aliquotast_icms { get; set; }
+        public double valorst_icms { get; set; }
+        public string cst_ipi { get; set; }
+        public string enquadramento_ipi { get; set; }
+        public double basecalculo_ipi { get; set; }
+        public double aliquota_ipi { get; set; }
+        public double valor_ipi { get; set; }
+        public int cst_pis { get; set; } = 0;
+        public double basecalculo_pis { get; set; }
+        public double basecalculoquantidade_pis { get; set; }
+        public double aliquotapercentual_pis { get; set; }
+        public double aliquotareais_pis { get; set; }
+        public double valor_pis { get; set; }
+        public int cst_cofins { get; set; }
+        public double basecalculo_cofins { get; set; }
+        public double basecalculoquantidade_cofins { get; set; }
+        public double aliquotapercentual_cofins { get; set; }
+        public double aliquotareais_cofins { get; set; }
+        public double valor_cofins { get; set; }
+        public string codigocontacontabil { get; set; }
+        public double abatimentosnt { get; set; }
+
+        public virtual Venda IdvendaNavigation { get; set; }
     }
 
 }

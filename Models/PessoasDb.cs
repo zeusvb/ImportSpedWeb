@@ -12,6 +12,8 @@ namespace ImportSpedWeb.Models
 
         public int empresaid { get; set; }
 
+        public string CodigoParticipante { get; set; } = null; // 4
+
         public int tipodocumentopessoa { get; set; }
 
         public string cnpj { get; set; } = "";

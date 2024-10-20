@@ -165,22 +165,6 @@
   },
   {
     "ContainingType": "ImportSpedWeb.Controllers.FilesController",
-    "Method": "ProssearArquivo",
-    "RelativePath": "api/Files/ProssesarArquivos",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "ProssesarArquivos",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ImportSpedWeb.Controllers.FilesController",
     "Method": "UploadFile",
     "RelativePath": "api/Files/uploadFilesSped",
     "HttpMethod": "POST",

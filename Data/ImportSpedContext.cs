@@ -22,7 +22,8 @@ namespace ImportSpedWeb.Data
         public DbSet<Estado> Estado { get; set; }
         
         public DbSet<Ncm> Ncm { get; set; }
-        
+        public DbSet<Venda> Venda { get; set; }
+
 
 
 

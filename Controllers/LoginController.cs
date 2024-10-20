@@ -21,7 +21,7 @@ namespace ImportSpedWeb.Controllers
     [ApiController]
     [Route("api/[controller]")]
     
-    public class LoginController : ControllerBase
+    public  class LoginController : ControllerBase
     {
 
         private readonly ImportSpedContext _context;
@@ -34,13 +34,13 @@ namespace ImportSpedWeb.Controllers
 
         [HttpPost]
         [Route("Login")]
-        public IActionResult Login(Login objeto)
+        public async Task<IActionResult> Login(Login objeto)
         {
-            var UsuarioEncontrado =  _context.usuarios
+            var UsuarioEncontrado =  await _context.usuarios
                                     .Where(u =>
                                     u.nome == objeto.Usuario.ToString().ToUpper() &&
                                     u.senha == objeto.Pass
-                                    ).FirstOrDefault();
+                                    ).FirstOrDefaultAsync();
             if (UsuarioEncontrado == null)
                 return StatusCode(StatusCodes.Status404NotFound, new { isSucces = false, token = "" });
             else

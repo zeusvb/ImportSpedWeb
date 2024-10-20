@@ -95,24 +95,25 @@ namespace ImportSpedWeb.Controllers
 
             return fileData;
         }
-        [HttpPost("ProssesarArquivos")]
-        public async Task<IActionResult> ProssearArquivo(string ProssesarArquivos)
-        {
-            var FilesProcessar = await _context.files.Where(c => c.status == 0).ToListAsync();
+       
+        //[HttpPost("ProssesarArquivos")]
+        //public async Task<IActionResult> ProssearArquivo(string ProssesarArquivos)
+        //{
+        //    var FilesProcessar = await _context.files.Where(c => c.status == 0).ToListAsync();
 
-            //ImportArquivo Lr = new ImportArquivo();
-
-
-            for (int i = 0; i < FilesProcessar.Count; i++)
-            {
-
-                LerArquivo(FilesProcessar[i]);
-
-            }
+        //    //ImportArquivo Lr = new ImportArquivo();
 
 
-            return Ok();
-        }
+        //    for (int i = 0; i < FilesProcessar.Count; i++)
+        //    {
+
+        //        LerArquivo(FilesProcessar[i]);
+
+        //    }
+
+
+        //    return Ok();
+        //}
 
         private async void LerArquivo(FileData ArqFiles)
         {

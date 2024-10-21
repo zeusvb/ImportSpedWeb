@@ -12,7 +12,7 @@ namespace ImportSpedWeb.Models
 
         public int empresaid { get; set; }
 
-        public string CodigoParticipante { get; set; } = null; // 4
+        public string codigoparticipante { get; set; } = "";
 
         public int tipodocumentopessoa { get; set; }
 
@@ -42,7 +42,7 @@ namespace ImportSpedWeb.Models
 
         public string bairro { get; set; }
 
-        public string cep { get; set; }
+        //public string cep { get; set; }
 
         public int cidadeid { get; set; }
 

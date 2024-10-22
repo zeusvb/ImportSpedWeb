@@ -81,31 +81,37 @@ namespace ImportSpedWeb.Controllers
             return Ok(EmpresaRecord);
         }
 
-        //[HttpPut("{id:int}")]
-        //public async Task<ActionResult<Empresas>> UpdateEmpresa(int id, Empresas empresa)
-        //{
-        //    try
-        //    {
-        //        if (id != empresa.empresaid)
-        //        {
-        //            return BadRequest("Employee ID mismatch");
-        //        }
+        [HttpPut("{id:int}")]
+        public async Task<ActionResult<Empresas>> UpdateEmpresa(int id, Empresas empresa)
+        {
+            try
+            {
+                if (id != empresa.empresaid)
+                {
+                    return BadRequest();
+                }
 
-        //        var empresaToUpdate = await _context.empresa.Where(c => c.empresaid == id).FirstOrDefaultAsync();
+                if (await _context.empresa.FindAsync((short)id) is Empresas found)
+                {
+                    _context.Entry(found).CurrentValues.SetValues(empresa);
 
-        //        if (empresaToUpdate == null)
-        //        {
-        //            return NotFound($"Employee with Id = {id} not found");
-        //        }
+                    await _context.SaveChangesAsync();
 
-        //        return await _context.empresa.Update (empresa);
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return StatusCode(StatusCodes.Status500InternalServerError,
-        //            "Error updating data");
-        //    }
-        //}
+                    return Ok(empresa);
+                }
+                else
+                {
+                    return NotFound();
+                }
+
+
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    "Error atualizar dados");
+            }
+        }
 
         [HttpDelete("{id:int}")]
         public async Task<ActionResult<Empresas>> DeleteEmpresa(int id)

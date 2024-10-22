@@ -67,6 +67,45 @@ namespace ImportSpedWeb.Controllers
                 return StatusCode(StatusCodes.Status201Created, new { idSucces = true, IdUser = modeloUsuario.usuario_id });
 
         }
-      
+
+        [HttpPut("{id:int}")]
+        [Authorize]
+        public async Task<ActionResult<usuario>> UpdateEmpresa(int id, usuario Usuarios)
+        {
+            try
+            {
+                if (id != Usuarios.usuario_id)
+                {
+                    return BadRequest();
+                }
+
+               // var empresaToUpdate = await _context.usuarios.FindAsync ((short)id);
+
+
+                if ( await _context.usuarios.FindAsync((short)id) is usuario found)
+                {
+                    _context.Entry(found).CurrentValues.SetValues(Usuarios);
+
+                    await _context.SaveChangesAsync();
+
+                    return Ok(Usuarios);
+                }
+                else
+
+                //if (empresaToUpdate == null)
+                {
+                    return NotFound();
+                }
+
+            
+
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    "Error atualizar dados");
+            }
+        }
+
     }
 }

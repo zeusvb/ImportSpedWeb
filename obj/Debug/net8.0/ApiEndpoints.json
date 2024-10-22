@@ -91,6 +91,37 @@
   },
   {
     "ContainingType": "ImportSpedWeb.Controllers.EmpresasController",
+    "Method": "UpdateEmpresa",
+    "RelativePath": "api/Empresas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "empresa",
+        "Type": "ImportSpedWeb.Models.Empresas",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ImportSpedWeb.Models.Empresas",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ImportSpedWeb.Controllers.EmpresasController",
     "Method": "DeleteEmpresa",
     "RelativePath": "api/Empresas/{id}",
     "HttpMethod": "DELETE",
@@ -215,6 +246,37 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ImportSpedWeb.Controllers.LoginController",
+    "Method": "UpdateEmpresa",
+    "RelativePath": "api/Login/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "Usuarios",
+        "Type": "ImportSpedWeb.Models.usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ImportSpedWeb.Models.usuario",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "ImportSpedWeb.Controllers.LoginController",

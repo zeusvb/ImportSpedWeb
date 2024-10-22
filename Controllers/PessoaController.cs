@@ -38,7 +38,7 @@ namespace ImportSpedWeb.Controllers
                 complemento = Pessoadto.complemento.ToString().ToUpper(),
                 numero = Pessoadto.numero.ToString(),
                 bairro = Pessoadto.bairro.ToString().ToUpper(),
-                cep = Pessoadto.cep.ToString(),
+                //cep = Pessoadto.cep.ToString(),
                 inscricaomunicipal = Pessoadto.inscricaomunicipal.ToString(),
                 inscricaoestadual = Pessoadto.inscricaoestadual.ToString(),
                 cidadeid = Pessoadto.cidadeid,

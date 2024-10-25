@@ -25,7 +25,7 @@ namespace ImportSpedWeb.Controllers
         }
 
 
-        [HttpGet("{IbgeMunicipio}")]
+        [HttpGet("Cidade/{IbgeMunicipio}")]
         public async Task<IActionResult> GetMunicipioIbge(string IbgeMunicipio)
         {
             var EmpresaRecord = await _context.Municipio.Where(e => e.codigoibge == IbgeMunicipio).FirstOrDefaultAsync();
@@ -38,15 +38,19 @@ namespace ImportSpedWeb.Controllers
         }
 
         [HttpGet("{NomeMunicipio::required}")]
-        public async Task<IActionResult> GetMunicipio(string NomeMunicipio)
+        public IActionResult GetMunicipio(string NomeMunicipio)
         {
 
-            var EmpresaRecord = await _context.Municipio.Where(e => EF.Functions.Like(e.descricao.ToString().ToLower(), "%" + NomeMunicipio.ToUpper() + "%")).ToListAsync();
+            //var EmpresaRecord = await _context.Municipio.Where(e => EF.Functions.Like(e.descricao.ToString().ToLower(), "%" + NomeMunicipio.ToString().ToUpper() + "%")).ToListAsync();
+            var EmpresaRecord = from M in  _context.Municipio
+                                where EF.Functions.ILike (M.descricao,"%" + NomeMunicipio + "%")
+                                select M;
+                                //hhere(e => EF.Functions.Like(e.descricao.ToString().ToLower(), "%" + NomeMunicipio.ToString().ToUpper() + "%")).ToListAsync();
             if (EmpresaRecord == null)
                 return NotFound();
 
 
-            return Ok(EmpresaRecord);
+            return Ok(EmpresaRecord.ToList());
         }
 
         [HttpGet("{idMunicipio::int}")]

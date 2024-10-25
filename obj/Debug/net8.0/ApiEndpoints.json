@@ -322,22 +322,6 @@
   },
   {
     "ContainingType": "ImportSpedWeb.Controllers.MunicipioController",
-    "Method": "GetMunicipioIbge",
-    "RelativePath": "api/Municipio/{IbgeMunicipio}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "IbgeMunicipio",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ImportSpedWeb.Controllers.MunicipioController",
     "Method": "GetMunicipioId",
     "RelativePath": "api/Municipio/{idMunicipio}",
     "HttpMethod": "GET",
@@ -362,6 +346,22 @@
     "Parameters": [
       {
         "Name": "NomeMunicipio",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ImportSpedWeb.Controllers.MunicipioController",
+    "Method": "GetMunicipioIbge",
+    "RelativePath": "api/Municipio/Cidade/{IbgeMunicipio}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IbgeMunicipio",
         "Type": "System.String",
         "IsRequired": true
       }

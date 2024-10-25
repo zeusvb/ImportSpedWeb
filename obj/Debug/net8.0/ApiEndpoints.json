@@ -370,8 +370,18 @@
   },
   {
     "ContainingType": "ImportSpedWeb.Controllers.MunicipioController",
+    "Method": "GetAllUF",
+    "RelativePath": "api/Municipio/Uf",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ImportSpedWeb.Controllers.MunicipioController",
     "Method": "GetMunicipioUF",
-    "RelativePath": "api/Municipio/uf/{idUF}",
+    "RelativePath": "api/Municipio/Uf/{idUF}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

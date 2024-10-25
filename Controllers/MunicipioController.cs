@@ -93,6 +93,17 @@ namespace ImportSpedWeb.Controllers
         }
 
 
+        [HttpGet("Uf")]
+        public async Task<IActionResult> GetAllUF()
+        {
+            var MunicipioRecord = await _context.Estado.ToListAsync();
+
+            if (MunicipioRecord == null)
+                return NotFound();
+
+
+            return Ok(MunicipioRecord);
+        }
         //[HttpGet]
         //public async Task<IEnumerable<municipio>> GetMunicipio()
         //{

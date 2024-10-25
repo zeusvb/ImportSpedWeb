@@ -118,15 +118,15 @@ namespace ImportSpedWeb.Data
 
             modelBuilder.Entity<Estado>(entity =>
             {
-                entity.HasKey(e => e.Id).HasName("estado_pkey");
+                entity.HasKey(e => e.id).HasName("estado_pkey");
 
                 entity.ToTable("estado");
 
-                entity.Property(e => e.Id).HasColumnName("id");
-                entity.Property(e => e.Codigoestado)
+                entity.Property(e => e.id).HasColumnName("id");
+                entity.Property(e => e.codigoestado)
                     .HasDefaultValue(0)
                     .HasColumnName("codigoestado");
-                entity.Property(e => e.DescricaoUf)
+                entity.Property(e => e.descricaouf)
                     .HasMaxLength(100)
                     .HasColumnName("descricao_uf");
             });

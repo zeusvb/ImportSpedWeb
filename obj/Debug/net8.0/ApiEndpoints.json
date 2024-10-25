@@ -369,6 +369,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ImportSpedWeb.Controllers.MunicipioController",
+    "Method": "GetMunicipioUF",
+    "RelativePath": "api/Municipio/uf/{idUF}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUF",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ImportSpedWeb.Controllers.PessoaController",
     "Method": "GetEmpresaCnpj",
     "RelativePath": "api/Pessoa/{cnpj}",

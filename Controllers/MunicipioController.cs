@@ -1,9 +1,11 @@
-﻿using ImportSpedWeb.Data;
+﻿using EficazFramework.SPED.Schemas.CTe;
+using ImportSpedWeb.Data;
 using ImportSpedWeb.DTO;
 using ImportSpedWeb.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace ImportSpedWeb.Controllers
 {
@@ -59,6 +61,25 @@ namespace ImportSpedWeb.Controllers
             return Ok(EmpresaRecord);
         }
 
+        [HttpGet("Uf/{idUF}")]
+        public IActionResult GetMunicipioUF(int idUF)
+        {
+
+
+            var query = (from cidades in _context.Municipio
+                         join uf in _context.Estado on (cidades.codigoestado) equals (uf.codigoestado)
+                         where uf.codigoestado == idUF
+                         select new { cidades.codigoibge, cidades.descricao, cidades.codigoestado, uf.descricaouf });
+
+
+
+            if (query == null)
+                return NotFound();
+            //var ret = query.ToListAsync();
+
+            return Ok(query);
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -70,6 +91,7 @@ namespace ImportSpedWeb.Controllers
 
             return Ok(MunicipioRecord);
         }
+
 
         //[HttpGet]
         //public async Task<IEnumerable<municipio>> GetMunicipio()

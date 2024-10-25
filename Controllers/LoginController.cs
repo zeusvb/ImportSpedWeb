@@ -41,6 +41,7 @@ namespace ImportSpedWeb.Controllers
                                     u.nome == objeto.Usuario.ToString().ToUpper() &&
                                     u.senha == objeto.Pass
                                     ).FirstOrDefaultAsync();
+
             if (UsuarioEncontrado == null)
                 return StatusCode(StatusCodes.Status404NotFound, new { isSucces = false, token = "" });
             else

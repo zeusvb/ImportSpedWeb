@@ -3,12 +3,52 @@
   "WorkspaceRootPath": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|d:\\fontes bsb\\importspedweb\\importspedweb\\controllers\\vendacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|solutionrelative:controllers\\vendacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|d:\\fontes bsb\\importspedweb\\importspedweb\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|solutionrelative:controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|d:\\fontes bsb\\importspedweb\\importspedweb\\controllers\\pessoacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|solutionrelative:controllers\\pessoacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|d:\\fontes bsb\\importspedweb\\importspedweb\\controllers\\municipiocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|solutionrelative:controllers\\municipiocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|d:\\fontes bsb\\importspedweb\\importspedweb\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|d:\\fontes bsb\\importspedweb\\importspedweb\\controllers\\importsped.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|solutionrelative:controllers\\importsped.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|d:\\fontes bsb\\importspedweb\\importspedweb\\controllers\\empresascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|solutionrelative:controllers\\empresascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|d:\\fontes bsb\\importspedweb\\importspedweb\\dto\\compradto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|solutionrelative:dto\\compradto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|d:\\fontes bsb\\importspedweb\\importspedweb\\controllers\\compracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|solutionrelative:controllers\\compracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|d:\\fontes bsb\\importspedweb\\importspedweb\\models\\vendadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|solutionrelative:models\\vendadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|d:\\fontes bsb\\importspedweb\\importspedweb\\data\\importspedcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|solutionrelative:data\\importspedcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|d:\\fontes bsb\\importspedweb\\importspedweb\\models\\empresadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18CDF613-F7DE-46E8-9E49-46B17C79F42A}|ImportSpedWeb.csproj|solutionrelative:models\\empresadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +58,162 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ImportSpedContext.cs",
-              "DocumentMoniker": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Data\\ImportSpedContext.cs",
-              "RelativeDocumentMoniker": "Data\\ImportSpedContext.cs",
-              "ToolTip": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Data\\ImportSpedContext.cs",
-              "RelativeToolTip": "Data\\ImportSpedContext.cs",
-              "ViewState": "AgIAAI4BAAAAAAAAAAAjwJQBAAAIAAAAAAAAAA==",
+              "Title": "ProdutoController.cs",
+              "DocumentMoniker": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Controllers\\ProdutoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProdutoController.cs",
+              "ToolTip": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Controllers\\ProdutoController.cs",
+              "RelativeToolTip": "Controllers\\ProdutoController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAwwF0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T13:46:38.232Z",
+              "WhenOpened": "2024-10-26T14:42:37.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EmpresasController.cs",
+              "DocumentMoniker": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Controllers\\EmpresasController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmpresasController.cs",
+              "ToolTip": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Controllers\\EmpresasController.cs",
+              "RelativeToolTip": "Controllers\\EmpresasController.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T14:41:59.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ImportSped.cs",
+              "DocumentMoniker": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Controllers\\ImportSped.cs",
+              "RelativeDocumentMoniker": "Controllers\\ImportSped.cs",
+              "ToolTip": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Controllers\\ImportSped.cs",
+              "RelativeToolTip": "Controllers\\ImportSped.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T11:50:25.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PessoaController.cs",
+              "DocumentMoniker": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Controllers\\PessoaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PessoaController.cs",
+              "ToolTip": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Controllers\\PessoaController.cs",
+              "RelativeToolTip": "Controllers\\PessoaController.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T11:50:25.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\LoginController.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T11:50:25.484Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "VendaController.cs",
+              "DocumentMoniker": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Controllers\\VendaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VendaController.cs",
+              "ToolTip": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Controllers\\VendaController.cs",
+              "RelativeToolTip": "Controllers\\VendaController.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAcwHIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T11:45:33.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CompraDTO.cs",
+              "DocumentMoniker": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\DTO\\CompraDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\CompraDTO.cs",
+              "ToolTip": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\DTO\\CompraDTO.cs",
+              "RelativeToolTip": "DTO\\CompraDTO.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAIAwwC0AAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T14:17:03.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "MunicipioController.cs",
               "DocumentMoniker": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Controllers\\MunicipioController.cs",
               "RelativeDocumentMoniker": "Controllers\\MunicipioController.cs",
               "ToolTip": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Controllers\\MunicipioController.cs",
               "RelativeToolTip": "Controllers\\MunicipioController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAlwB0AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAHoAAAAAAAAAAADgvygAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-24T23:18:01.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "VendaDb.cs",
+              "DocumentMoniker": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Models\\VendaDb.cs",
+              "RelativeDocumentMoniker": "Models\\VendaDb.cs",
+              "ToolTip": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Models\\VendaDb.cs",
+              "RelativeToolTip": "Models\\VendaDb.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T14:07:11.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CompraController.cs",
+              "DocumentMoniker": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Controllers\\CompraController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CompraController.cs",
+              "ToolTip": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Controllers\\CompraController.cs",
+              "RelativeToolTip": "Controllers\\CompraController.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAIwHUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T11:45:16.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EmpresaDb.cs",
+              "DocumentMoniker": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Models\\EmpresaDb.cs",
+              "RelativeDocumentMoniker": "Models\\EmpresaDb.cs",
+              "ToolTip": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Models\\EmpresaDb.cs",
+              "RelativeToolTip": "Models\\EmpresaDb.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAkwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T11:36:19.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ImportSpedContext.cs",
+              "DocumentMoniker": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Data\\ImportSpedContext.cs",
+              "RelativeDocumentMoniker": "Data\\ImportSpedContext.cs",
+              "ToolTip": "D:\\Fontes Bsb\\ImportSpedWeb\\ImportSpedWeb\\Data\\ImportSpedContext.cs",
+              "RelativeToolTip": "Data\\ImportSpedContext.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAD4v1sAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T13:46:38.232Z",
               "EditorCaption": ""
             }
           ]

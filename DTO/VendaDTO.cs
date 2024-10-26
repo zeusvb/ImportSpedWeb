@@ -1,28 +1,29 @@
-﻿
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using ImportSpedWeb.Models;
 
-namespace ImportSpedWeb.Models
+namespace ImportSpedWeb.DTO
 {
-    [Table("venda")]
-    public class Venda
+    public class VendaDTO
     {
+        private VendaDTO()
+        {
+             List<VendaItemDTO> Vendaitem = new List<VendaItemDTO>();
 
-        public int idvenda { get; set; }
-        public int empresaid { get; set; }
+         }
+
+         public int empresaid { get; set; }
         public string codigoparticipante { get; set; } = null; // 4
         public string especiedocumento { get; set; } = null; // 5
-      
         public string serie { get; set; } = null; // 7
         public int numero { get; set; } = default; // 8
         public string chavenfe { get; set; } = null; // 9
         public DateTime dataemissao { get; set; } = default; // 10
         public DateTime dataentradasaida { get; set; } = default; // 11
         public double valortotaldocumento { get; set; } = default; // 12
-      
+
         public double valordesconto { get; set; } = default; // 14
         public double valorabatimento { get; set; } = default; // 15
         public double valortotalmercadorias { get; set; } = default; // 16
-       
+
         public double valorfrete { get; set; } = default; // 18
         public double valorseguro { get; set; } = default; // 19
         public double valoroutrasdespesas { get; set; } = default; // 20
@@ -35,7 +36,9 @@ namespace ImportSpedWeb.Models
         public double valorcofins { get; set; } = default; // 27
         public double valorpisst { get; set; } = default; // 28
         public double valorcofinsst { get; set; } = default; // 29
-        public virtual Empresas empresas { get; set; }
-        public virtual ICollection<Vendaitem> Vendaitems { get; set; } = new List<Vendaitem>();
+
+        public List<VendaItemDTO> Vendaitem = new List<VendaItemDTO> { };
+       
+      
     }
 }

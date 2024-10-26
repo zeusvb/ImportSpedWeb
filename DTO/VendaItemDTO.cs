@@ -1,14 +1,10 @@
-﻿
-using System;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using ImportSpedWeb.Models;
 
-namespace ImportSpedWeb.Models
+namespace ImportSpedWeb.DTO
 {
-    [Table("vendaitem")]
-    public class Vendaitem
+    public class VendaItemDTO
     {
-        public int idvenda { get; set; }
-        public int numerosequencialitem { get; set; }
+       public int numerosequencialitem { get; set; }
         public string codigoproduto { get; set; }
         public string descricaocomplementaritem { get; set; }
         public double quantidade { get; set; }
@@ -46,7 +42,6 @@ namespace ImportSpedWeb.Models
         public string codigocontacontabil { get; set; }
         public double abatimentosnt { get; set; }
 
-        public virtual Venda IdvendaNavigation { get; set; }
+        public virtual VendaDTO IdvendaNavigation { get; set; }
     }
-
 }

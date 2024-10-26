@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ImportSpedWeb.Models
@@ -45,6 +46,7 @@ namespace ImportSpedWeb.Models
         public DateTime datacriacao { get; set; } = DateTime.UtcNow;
 
         public DateTime dataatualizacao { get; set; } = DateTime.UtcNow;
+        public virtual ICollection<Venda> venda { get; set; } = new List<Venda>();
 
     }
 }

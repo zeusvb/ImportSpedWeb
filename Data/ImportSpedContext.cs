@@ -91,6 +91,7 @@ namespace ImportSpedWeb.Data
                 entity.HasKey(e => e.id).HasName("empresas_pkey");
                 entity.ToTable("empresas");
                 entity.Property(e => e.id).HasColumnName("id");
+                entity.HasIndex(e => e.empresaid, "empresaid_uni_pk").IsUnique();
 
             });
 
@@ -315,6 +316,7 @@ namespace ImportSpedWeb.Data
             modelBuilder.Entity<Venda>(entity =>
             {
                 entity.HasKey(e => e.idvenda).HasName("venda_pk");
+                entity.HasIndex(e => e.empresaid, "fki_venda_empresa_fk");
 
                 entity.ToTable("venda");
 

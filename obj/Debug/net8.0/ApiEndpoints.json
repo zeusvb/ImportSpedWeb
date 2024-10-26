@@ -1,15 +1,41 @@
 [
   {
     "ContainingType": "ImportSpedWeb.Controllers.CompraController",
-    "Method": "GetEmpresaCnpj",
-    "RelativePath": "api/Compra/{chave}",
+    "Method": "GetComprachave",
+    "RelativePath": "api/Compra/{chaveNfe}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "chave",
+        "Name": "chaveNfe",
         "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ImportSpedWeb.Controllers.CompraController",
+    "Method": "GetCompraData",
+    "RelativePath": "api/Compra/{EmpresaId}/{DataIcinial}/{DataFinal}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EmpresaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "DataIcinial",
+        "Type": "System.DateTime",
+        "IsRequired": true
+      },
+      {
+        "Name": "DataFinal",
+        "Type": "System.DateTime",
         "IsRequired": true
       }
     ],
@@ -59,7 +85,7 @@
   },
   {
     "ContainingType": "ImportSpedWeb.Controllers.CompraController",
-    "Method": "RegistrarPessoa",
+    "Method": "RegistrarCompra",
     "RelativePath": "api/Compra/RegistrarCompra",
     "HttpMethod": "POST",
     "IsController": true,
@@ -542,6 +568,106 @@
       {
         "Name": "Produtodto",
         "Type": "ImportSpedWeb.DTO.ProdutoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ImportSpedWeb.Controllers.VendaController",
+    "Method": "GetEmpresachave",
+    "RelativePath": "api/Venda/{chaveNfe}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chaveNfe",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ImportSpedWeb.Controllers.VendaController",
+    "Method": "GetVendaData",
+    "RelativePath": "api/Venda/{EmpresaId}/{DataIcinial}/{DataFinal}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EmpresaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "DataIcinial",
+        "Type": "System.DateTime",
+        "IsRequired": true
+      },
+      {
+        "Name": "DataFinal",
+        "Type": "System.DateTime",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ImportSpedWeb.Controllers.VendaController",
+    "Method": "GetVendaId",
+    "RelativePath": "api/Venda/{idVenda}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idVenda",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ImportSpedWeb.Controllers.VendaController",
+    "Method": "DeleteCompras",
+    "RelativePath": "api/Venda/{idVenda}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idVenda",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ImportSpedWeb.Models.pessoa",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ImportSpedWeb.Controllers.VendaController",
+    "Method": "RegistrarVenda",
+    "RelativePath": "api/Venda/RegistrarVenda",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "VendaDto",
+        "Type": "ImportSpedWeb.Models.Venda",
         "IsRequired": true
       }
     ],

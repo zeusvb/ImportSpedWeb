@@ -1,4 +1,5 @@
-﻿using ImportSpedWeb.Data;
+﻿using EficazFramework.SPED.Extensions;
+using ImportSpedWeb.Data;
 using ImportSpedWeb.DTO;
 using ImportSpedWeb.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -23,7 +24,7 @@ namespace ImportSpedWeb.Controllers
         }
 
         [HttpPost("RegistrarCompra")]
-        public async Task<IActionResult> RegistrarPessoa(CompraDTO compraDto)
+        public async Task<IActionResult> RegistrarCompra(CompraDTO compraDto)
         {
 
             var modelocompra = new Compra
@@ -91,10 +92,22 @@ namespace ImportSpedWeb.Controllers
             return Ok(compraRecord);
         }
 
-        [HttpGet("{chave}")]
-        public async Task<IActionResult> GetEmpresaCnpj(string chave)
+        [HttpGet("{chaveNfe}")]
+        public async Task<IActionResult> GetComprachave(string chaveNfe)
         {
-            var CompraRecord = await _context.compras.Where(e => e.Chavenota == chave).FirstOrDefaultAsync();
+            var CompraRecord = await _context.compras.Where(e => e.Chavenota == chaveNfe).FirstOrDefaultAsync();
+
+            if (CompraRecord == null)
+                return NotFound();
+
+
+            return Ok(CompraRecord);
+        }
+
+        [HttpGet("{EmpresaId}/{DataIcinial}/{DataFinal}")]
+        public async Task<IActionResult> GetCompraData(int EmpresaId, DateTime DataIcinial, DateTime DataFinal)
+        {
+            var CompraRecord = await _context.compras.Where(e => e.Empresaid == EmpresaId && e.Dataentrada >= DataFinal.Date && e.Dataentrada <= DataFinal.Date).ToListAsync();
 
             if (CompraRecord == null)
                 return NotFound();
@@ -104,7 +117,7 @@ namespace ImportSpedWeb.Controllers
         }
 
         [HttpDelete("{idCompra:int}")]
-        public async Task<ActionResult<pessoa>> DeleteCompras(int idCompra)
+        public async Task<ActionResult<Compra>> DeleteCompras(int idCompra)
         {
             try
             {

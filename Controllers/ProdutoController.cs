@@ -81,7 +81,7 @@ namespace ImportSpedWeb.Controllers
 
 
         [HttpDelete("{idProduto:int}")]
-        public async Task<ActionResult<pessoa>> DeletePessoa(int idProduto)
+        public async Task<ActionResult<produto>> DeletePessoa(int idProduto)
         {
             try
             {
